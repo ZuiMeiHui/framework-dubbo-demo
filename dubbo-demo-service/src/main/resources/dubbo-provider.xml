@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+	<!-- Dubbo的基本配置-->
+	<dubbo:application name="dubbo-demo-service" />
+	<dubbo:registry protocol="zookeeper" address="zookeeper://192.168.1.30:2181" simplified="true" />
+	<dubbo:config-center protocol="zookeeper" address="zookeeper://192.168.1.30:2181" />
+	<dubbo:metadata-report address="zookeeper://192.168.1.30:2181" />
+	<dubbo:protocol name="dubbo" port="20881" />
+
+	<!-- 配置提供的服务 -->
+	<dubbo:service interface="com.zuimeihui.demo.service.api.IDemoUserService" ref="demoUserService" version="1.0.0" timeout="5000" />
+	<dubbo:service interface="com.zuimeihui.demo.service.api.IDemoDepartmentService" ref="demoDepartmentService" version="1.0.0" timeout="5000" />
+
+</beans>
