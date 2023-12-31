@@ -15,7 +15,7 @@
 	<name>dubbo-demo-web</name>
 
 	<dependencies>
-		<!-- 本工程API包 -->
+		<!-- 本工程API模块引入 -->
 		<dependency>
 			<groupId>com.zuimeihui.demo</groupId>
 			<artifactId>dubbo-demo-api</artifactId>

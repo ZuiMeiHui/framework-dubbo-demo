@@ -11,10 +11,11 @@ import com.zuimeihui.demo.service.dto.DemoUserDTO;
 import com.zuimeihui.demo.service.dto.DemoUserQueryDTO;
 
 /**
- * 用户表，服务层
+ * 用户服务层
  * 
- * @author 醉美会 ZuiMeiHui.com
- * @date 2023-11-12 20:29:00
+ * @ClassName: DemoUserServiceImpl
+ * @Description: TODO
+ * @author ZuiMeiHui.com 醉美会
  */
 @Service("demoUserService")
 public class DemoUserServiceImpl extends BaseService<DemoUserMapper, DemoUserDTO, DemoUserQueryDTO> implements IDemoUserService {
@@ -35,5 +36,5 @@ public class DemoUserServiceImpl extends BaseService<DemoUserMapper, DemoUserDTO
 		}
 		return dto.getId();
 	}
-	
+
 }

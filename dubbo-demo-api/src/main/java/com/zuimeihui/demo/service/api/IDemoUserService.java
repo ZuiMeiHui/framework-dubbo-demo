@@ -8,74 +8,116 @@ import com.zuimeihui.demo.service.dto.DemoUserDTO;
 import com.zuimeihui.demo.service.dto.DemoUserQueryDTO;
 
 /**
- * 用户表，接口层
+ * 用户接口层
  * 
- * @author 醉美会 ZuiMeiHui.com
- * @date 2023-11-12 20:29:00
+ * @ClassName: IDemoUserService
+ * @Description: TODO
+ * @author ZuiMeiHui.com 醉美会
  */
 public interface IDemoUserService {
 
 	/**
 	 * 保存
 	 * 
-	 * @param dto
-	 * @param userId
-	 * @param userName
+	 * @Title: save
+	 * @Description: TODO
+	 * @param @param  dto
+	 * @param @param  userId
+	 * @param @param  userName
+	 * @param @return 参数
+	 * @return Long 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public Long save(DemoUserDTO dto, String userId, String userName);
 
 	/**
 	 * 通过主键查询记录
 	 * 
-	 * @param id
-	 * @return
+	 * @Title: get
+	 * @Description: TODO
+	 * @param @param  id
+	 * @param @return 参数
+	 * @return DemoUserDTO 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public DemoUserDTO get(Long id);
 
 	/**
 	 * 通过主键删除记录
 	 * 
-	 * @param id
+	 * @Title: remove
+	 * @Description: TODO
+	 * @param @param id 参数
+	 * @return void 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public void remove(Long id);
 
 	/**
 	 * 通过条件分页查询
 	 * 
-	 * @param queryDTO
-	 * @return
+	 * @Title: selectPageBy
+	 * @Description: TODO
+	 * @param @param  queryDTO
+	 * @param @return 参数
+	 * @return PageBean<DemoUserDTO> 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public PageBean<DemoUserDTO> selectPageBy(DemoUserQueryDTO queryDTO);
 
 	/**
 	 * 通过条件查询
 	 * 
-	 * @param queryDTO
-	 * @return
+	 * @Title: selectBy
+	 * @Description: TODO
+	 * @param @param  queryDTO
+	 * @param @return 参数
+	 * @return List<DemoUserDTO> 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public List<DemoUserDTO> selectBy(DemoUserQueryDTO queryDTO);
 
 	/**
-	 * 通过条件获取但行记录
+	 * 通过条件获取一行记录
 	 * 
-	 * @param queryDTO
-	 * @return
+	 * @Title: uniqueBy
+	 * @Description: TODO
+	 * @param @param  queryDTO
+	 * @param @return 参数
+	 * @return DemoUserDTO 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public DemoUserDTO uniqueBy(DemoUserQueryDTO queryDTO);
 
 	/**
 	 * 新增数据参数校验
 	 * 
-	 * @param dto
-	 * @return
+	 * @Title: checkSaveInput
+	 * @Description: TODO
+	 * @param @param  dto
+	 * @param @return 参数
+	 * @return ApiResult<?> 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public ApiResult<?> checkSaveInput(DemoUserDTO dto);
 
 	/**
 	 * 删除数据参数校验
 	 * 
-	 * @param id
-	 * @return
+	 * @Title: checkRemove
+	 * @Description: TODO
+	 * @param @param  id
+	 * @param @return 参数
+	 * @return ApiResult<?> 返回类型
+	 * @throws
+	 * @author ZuiMeiHui.com 醉美会
 	 */
 	public ApiResult<?> checkRemove(Long id);
 

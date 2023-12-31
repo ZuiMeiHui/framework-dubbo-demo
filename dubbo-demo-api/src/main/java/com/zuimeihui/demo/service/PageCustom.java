@@ -3,8 +3,9 @@ package com.zuimeihui.demo.service;
 /**
  * 分页
  * 
- * @author 醉美会 ZuiMeiHui.com
- * @date 2023-11-12 10:15:06
+ * @ClassName: PageCustom
+ * @Description: TODO
+ * @author ZuiMeiHui.com 醉美会
  */
 public class PageCustom {
 

@@ -11,10 +11,11 @@ import com.zuimeihui.demo.service.dto.DemoDepartmentDTO;
 import com.zuimeihui.demo.service.dto.DemoDepartmentQueryDTO;
 
 /**
- * 部门表，服务层
+ * 部门服务层
  * 
- * @author 醉美会 ZuiMeiHui.com
- * @date 2023-11-12 20:29:00
+ * @ClassName: DemoDepartmentServiceImpl
+ * @Description: TODO
+ * @author ZuiMeiHui.com 醉美会
  */
 @Service("demoDepartmentService")
 public class DemoDepartmentServiceImpl extends BaseService<DemoDepartmentMapper, DemoDepartmentDTO, DemoDepartmentQueryDTO> implements IDemoDepartmentService {
